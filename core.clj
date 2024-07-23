@@ -1,5 +1,5 @@
 ;; 1. Run REPL with `:lib/hotload` alias turned on
-(require '[clojure.tools.deps.alpha.repl :refer [add-libs]])
+(require '[clojure.tools.deps.repl :refer [add-libs]])
 
 ;; 2. Hotload any libraries required for the server
 (add-libs
