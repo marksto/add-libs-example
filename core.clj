@@ -1,13 +1,14 @@
-;; 1. Run the REPL with `:alpha/hotload-libs` alias
+;; 1. Run REPL with `:lib/hotload` alias turned on
 (require '[clojure.tools.deps.alpha.repl :refer [add-libs]])
 
-;; 2. Hotload the libraries required for the server
+;; 2. Hotload any libraries required for the server
 (add-libs
   '{http-kit/http-kit {:mvn/version "2.7.0-alpha1"}})
 ;; => (http-kit/http-kit)
 
-;; 3. Require the namespace from the `http-kit` lib
+;; 3. Require & eval the ns from the hotloaded lib
 (require '[org.httpkit.server :as app-server])
+
 
 ;; Git deps using the GitHub path (not the usual Maven group/artifact)
 (require '[clojure.tools.gitlibs :as gitlibs])

@@ -1,0 +1,5 @@
+{:aliases
+ {:lib/hotload
+  {:extra-deps {org.clojure/tools.deps.alpha
+                {:git/url "https://github.com/clojure/tools.deps.alpha"
+                 :git/sha "e4fb92eef724fa39e29b39cc2b1a850567d490dd"}}}}}
